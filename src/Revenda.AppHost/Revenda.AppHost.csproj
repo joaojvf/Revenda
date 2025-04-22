@@ -12,10 +12,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Aspire.Hosting.AppHost" Version="9.0.0" />
+    <PackageReference Include="Aspire.Hosting.AppHost" Version="9.2.0" />
+    <PackageReference Include="Aspire.Hosting.SqlServer" Version="9.2.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Revenda.MigrationService\Revenda.MigrationService.csproj" />
     <ProjectReference Include="..\Revenda.UI\Revenda.UI.csproj" />
   </ItemGroup>
 

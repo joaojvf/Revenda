@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revenda.AppHost", "src\Reve
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revenda.ServiceDefaults", "src\Revenda.ServiceDefaults\Revenda.ServiceDefaults.csproj", "{1FECB52F-0ECF-868D-4AD9-B2851A13EAD5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revenda.MigrationService", "src\Revenda.MigrationService\Revenda.MigrationService.csproj", "{521F9EFA-42F3-4666-A36E-F5D29715264F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +50,10 @@ Global
 		{1FECB52F-0ECF-868D-4AD9-B2851A13EAD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FECB52F-0ECF-868D-4AD9-B2851A13EAD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FECB52F-0ECF-868D-4AD9-B2851A13EAD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{521F9EFA-42F3-4666-A36E-F5D29715264F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{521F9EFA-42F3-4666-A36E-F5D29715264F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{521F9EFA-42F3-4666-A36E-F5D29715264F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{521F9EFA-42F3-4666-A36E-F5D29715264F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,5 +62,9 @@ Global
 		{EEB9A500-68F8-43F9-A726-9DD9C160FB30} = {71BC5417-ECF3-4E9E-A035-0D86B404F55F}
 		{687AE088-4C29-46D3-B99A-7DBEEDFA8118} = {71BC5417-ECF3-4E9E-A035-0D86B404F55F}
 		{C67130A4-4E4A-4C62-95D7-AC67D2FB55C5} = {71BC5417-ECF3-4E9E-A035-0D86B404F55F}
+		{521F9EFA-42F3-4666-A36E-F5D29715264F} = {71BC5417-ECF3-4E9E-A035-0D86B404F55F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D04E6B2F-296A-4032-9C00-8C70943D6D7F}
 	EndGlobalSection
 EndGlobal
