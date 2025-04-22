@@ -1,0 +1,18 @@
+﻿services:
+  revenda:
+    image: revenda
+    build:
+      context: .
+      dockerfile: Revenda/Dockerfile
+
+  revenda.ui:
+    image: revenda.ui
+    build:
+      context: .
+      dockerfile: src/Revenda.UI/Dockerfile
+
+  revenda.ui-1:
+    image: revenda.ui-1
+    build:
+      context: .
+      dockerfile: src/Revenda.UI/Dockerfile

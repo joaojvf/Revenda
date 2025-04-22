@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1901B77C-E220-47EC-94BC-ACC070A64FF3}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yaml = docker-compose.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{71BC5417-ECF3-4E9E-A035-0D86B404F55F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{32CD13CB-7763-4ACF-9448-2AAD12C21021}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revenda.Core", "src\Revenda.Core\Revenda.Core.csproj", "{EEB9A500-68F8-43F9-A726-9DD9C160FB30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revenda.UI", "src\Revenda.UI\Revenda.UI.csproj", "{687AE088-4C29-46D3-B99A-7DBEEDFA8118}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revenda.Infrastructure", "src\Revenda.Infrastructure\Revenda.Infrastructure.csproj", "{C67130A4-4E4A-4C62-95D7-AC67D2FB55C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revenda.AppHost", "src\Revenda.AppHost\Revenda.AppHost.csproj", "{D9B07899-17B8-46B2-9F62-33BFBC706C75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revenda.ServiceDefaults", "src\Revenda.ServiceDefaults\Revenda.ServiceDefaults.csproj", "{1FECB52F-0ECF-868D-4AD9-B2851A13EAD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEB9A500-68F8-43F9-A726-9DD9C160FB30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEB9A500-68F8-43F9-A726-9DD9C160FB30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEB9A500-68F8-43F9-A726-9DD9C160FB30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEB9A500-68F8-43F9-A726-9DD9C160FB30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{687AE088-4C29-46D3-B99A-7DBEEDFA8118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{687AE088-4C29-46D3-B99A-7DBEEDFA8118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{687AE088-4C29-46D3-B99A-7DBEEDFA8118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{687AE088-4C29-46D3-B99A-7DBEEDFA8118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C67130A4-4E4A-4C62-95D7-AC67D2FB55C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C67130A4-4E4A-4C62-95D7-AC67D2FB55C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C67130A4-4E4A-4C62-95D7-AC67D2FB55C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C67130A4-4E4A-4C62-95D7-AC67D2FB55C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9B07899-17B8-46B2-9F62-33BFBC706C75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9B07899-17B8-46B2-9F62-33BFBC706C75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9B07899-17B8-46B2-9F62-33BFBC706C75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9B07899-17B8-46B2-9F62-33BFBC706C75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FECB52F-0ECF-868D-4AD9-B2851A13EAD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FECB52F-0ECF-868D-4AD9-B2851A13EAD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FECB52F-0ECF-868D-4AD9-B2851A13EAD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FECB52F-0ECF-868D-4AD9-B2851A13EAD5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EEB9A500-68F8-43F9-A726-9DD9C160FB30} = {71BC5417-ECF3-4E9E-A035-0D86B404F55F}
+		{687AE088-4C29-46D3-B99A-7DBEEDFA8118} = {71BC5417-ECF3-4E9E-A035-0D86B404F55F}
+		{C67130A4-4E4A-4C62-95D7-AC67D2FB55C5} = {71BC5417-ECF3-4E9E-A035-0D86B404F55F}
+	EndGlobalSection
+EndGlobal
