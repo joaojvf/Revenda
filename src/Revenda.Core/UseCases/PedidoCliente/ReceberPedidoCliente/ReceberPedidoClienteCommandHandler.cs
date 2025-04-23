@@ -18,8 +18,8 @@ namespace Revenda.Core.UseCases.PedidoCliente.ReceberPedidoCliente
     {
         public async Task<ReceberPedidoClienteResponse> Handle(ReceberPedidoClienteCommand request, CancellationToken cancellationToken)
         {
-            var revendaExists = await revendaRepository.GetRevendaByIdAsync(request.RevendaId, cancellationToken) is not null;
-            if (!revendaExists)
+            var revendaIsNull = await revendaRepository.GetRevendaByIdAsync(request.RevendaId, cancellationToken) is null;
+            if (revendaIsNull)
             {
                 throw new KeyNotFoundException($"Revenda com ID {request.RevendaId} não encontrada.");
             }

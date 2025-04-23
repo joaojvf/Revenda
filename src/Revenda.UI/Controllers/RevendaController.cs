@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Revenda.Core.UseCases.PedidoCliente.ReceberPedidoCliente;
 using Revenda.Core.UseCases.PedidoFornecedor.EmitirPedidoFornecedor;
+using Revenda.Core.UseCases.PedidoFornecedor.GetPedidoFornecedorByRevendaId;
 using Revenda.Core.UseCases.Revenda.CreateRevenda;
 using Revenda.Core.UseCases.Revenda.GetRevendaById;
 
@@ -52,6 +53,17 @@ namespace Revenda.UI.Controllers
             {
                 return Conflict(new { message = ex.Message });
             }
+        }
+
+        [HttpGet("{revendaId:guid}/pedidos-fornecedor")]
+        [ProducesResponseType(typeof(RevendaDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetPedidosFornecedorByRevendaId(Guid revendaId)
+        {
+            var query = new GetPedidFornecedorByRevendaIdQuery(revendaId);
+            var result = await mediator.Send(query);
+
+            return result != null ? Ok(result) : NotFound();
         }
     }
 }

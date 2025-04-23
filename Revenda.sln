@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1901B77C-E220-47EC-94BC-ACC070A64FF3}"
 	ProjectSection(SolutionItems) = preProject
@@ -23,6 +23,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revenda.ServiceDefaults", "src\Revenda.ServiceDefaults\Revenda.ServiceDefaults.csproj", "{1FECB52F-0ECF-868D-4AD9-B2851A13EAD5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revenda.MigrationService", "src\Revenda.MigrationService\Revenda.MigrationService.csproj", "{521F9EFA-42F3-4666-A36E-F5D29715264F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revenda.Core.Tests", "tests\Revenda.Core.Tests\Revenda.Core.Tests.csproj", "{3F29026A-82D8-42A5-804E-E19086728862}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,6 +56,10 @@ Global
 		{521F9EFA-42F3-4666-A36E-F5D29715264F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{521F9EFA-42F3-4666-A36E-F5D29715264F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{521F9EFA-42F3-4666-A36E-F5D29715264F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F29026A-82D8-42A5-804E-E19086728862}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F29026A-82D8-42A5-804E-E19086728862}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F29026A-82D8-42A5-804E-E19086728862}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F29026A-82D8-42A5-804E-E19086728862}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +69,7 @@ Global
 		{687AE088-4C29-46D3-B99A-7DBEEDFA8118} = {71BC5417-ECF3-4E9E-A035-0D86B404F55F}
 		{C67130A4-4E4A-4C62-95D7-AC67D2FB55C5} = {71BC5417-ECF3-4E9E-A035-0D86B404F55F}
 		{521F9EFA-42F3-4666-A36E-F5D29715264F} = {71BC5417-ECF3-4E9E-A035-0D86B404F55F}
+		{3F29026A-82D8-42A5-804E-E19086728862} = {32CD13CB-7763-4ACF-9448-2AAD12C21021}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D04E6B2F-296A-4032-9C00-8C70943D6D7F}

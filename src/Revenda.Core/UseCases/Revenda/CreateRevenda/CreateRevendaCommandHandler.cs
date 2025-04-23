@@ -15,8 +15,8 @@ namespace Revenda.Core.UseCases.Revenda.CreateRevenda
     {
         public async Task<Guid> Handle(CreateRevendaCommand request, CancellationToken cancellationToken)
         {
-            var existingRevenda = await repo.GetRevendaByCnpjAsync(request.Cnpj, cancellationToken) is not null;
-            if (!existingRevenda)
+            var revendaIsNull = await repo.GetRevendaByCnpjAsync(request.Cnpj, cancellationToken) is null;
+            if (!revendaIsNull)
             {
                 throw new System.ComponentModel.DataAnnotations.ValidationException($"Já existe uma revenda com o CNPJ {request.Cnpj}.");
             }

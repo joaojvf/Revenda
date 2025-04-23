@@ -18,8 +18,7 @@ public class Pedido
     public string? OrderId { get; set; } // ID retornado pela API mockada
     public int TentativasEnvio { get; set; } = 0;
 
-    // Somatório total das unidades para a validação do mínimo de 1000
-    [NotMapped] // Calculado ou gerenciado na lógica de criação
+    [NotMapped]
     public int QuantidadeTotal => Itens.Sum(i => i.Quantidade);
 
     // Se a  precisar saber os itens, mesmo sem os clientes:

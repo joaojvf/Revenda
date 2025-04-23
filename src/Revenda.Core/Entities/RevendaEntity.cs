@@ -31,7 +31,17 @@ public class RevendaEntity
     public virtual ICollection<PedidoCliente> PedidosCliente { get; set; } = new List<PedidoCliente>();
     public virtual ICollection<Pedido> Pedidos { get; set; } = new List<Pedido>();
 
-    // Construtor (se necessário para inicialização ou regras)
-    // Métodos de domínio (ex: AddTelefone, SetContatoPrincipal, etc. podem ir aqui)
+    //public RevendaEntity(string cnpj, string razaoSocial, string nomeFantasia, string email)
+    //{
+    //    this.Cnpj = cnpj;
+    //    this.RazaoSocial = razaoSocial;
+    //    this.NomeFantasia = nomeFantasia;
+    //    this.Email = email;
+    //}
+
+    //public RevendaEntity()
+    //{
+        
+    //}
 }
 

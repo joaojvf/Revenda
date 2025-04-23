@@ -11,6 +11,10 @@ var builder = Host.CreateApplicationBuilder(args);
 builder.Services.AddHostedService<ApiDbInitializer>();
 
 builder.AddServiceDefaults();
+builder.Services.Configure<HostOptions>(hostOptions =>
+{
+    hostOptions.BackgroundServiceExceptionBehavior = BackgroundServiceExceptionBehavior.Ignore;
+});
 
 builder.Services.AddOpenTelemetry()
     .WithTracing(tracing => tracing.AddSource(ApiDbInitializer.ActivitySourceName));

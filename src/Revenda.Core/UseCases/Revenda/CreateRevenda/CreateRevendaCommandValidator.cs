@@ -55,4 +55,35 @@ namespace Revenda.Core.UseCases.Revenda.CreateRevenda
         }
     }
 
+    public class CreateEnderecoEntregaDtoValidator : AbstractValidator<CreateEnderecoEntregaDto>
+    {
+        public CreateEnderecoEntregaDtoValidator()
+        {
+            RuleFor(e => e.Logradouro).NotEmpty().MaximumLength(200);
+            RuleFor(e => e.Bairro).NotEmpty().MaximumLength(100);
+            RuleFor(e => e.Cidade).NotEmpty().MaximumLength(100);
+            RuleFor(e => e.Estado).NotEmpty().Length(2);
+            RuleFor(e => e.Cep).NotEmpty().Matches(@"^\d{8}$").WithMessage("CEP inválido.");
+        }
+    }
+
+    public class CreateNomeContatoDtoValidator : AbstractValidator<CreateNomeContatoDto>
+    {
+        public CreateNomeContatoDtoValidator()
+        {
+            RuleFor(c => c.Nome).NotEmpty().MaximumLength(100);
+        }
+    }
+
+    public class CreateTelefoneDtoValidator : AbstractValidator<CreateTelefoneDto>
+    {
+        public CreateTelefoneDtoValidator()
+        {
+            RuleFor(t => t.Numero)
+                .NotEmpty()
+                .MaximumLength(20)
+                .Matches(@"^\+?[1-9]\d{1,14}$").WithMessage("Número de telefone inválido (ex: +5511987654321 ou 11987654321)."); // Exemplo E.164 simplificado
+        }
+    }
+
 }
