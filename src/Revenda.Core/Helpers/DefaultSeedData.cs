@@ -1,16 +1,9 @@
 ﻿using Revenda.Core.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Revenda.Core.Helpers
 {
     public static class DefaultSeedData
     {
-        // --- IDs Estáticos e Constantes ---
-
         // Revendas
         private static readonly Guid Revenda1Id = new Guid("f5b5a6d8-7c3e-4a8d-b0f3-3a0e5d7b2e1a");
         private static readonly Guid Revenda2Id = new Guid("a2e1d7b3-5d0e-4f3a-8b0c-6a8d7c3e5f5b");
@@ -35,13 +28,11 @@ namespace Revenda.Core.Helpers
         private static readonly Guid Endereco1Rev2Id = new Guid("ffffffff-ffff-ffff-ffff-ffffffffffff");
 
 
-        // --- Dados de Exemplo ---
-
         public static readonly List<RevendaEntity> DefaultRevendas = new()
     {
         new RevendaEntity
         {
-            Id = Revenda1Id, // Usando Guid estático
+            Id = Revenda1Id,
             Cnpj = "71039888000183",
             RazaoSocial = "Comércio de Bebidas Alegria Ltda.",
             NomeFantasia = "Distribuidora Alegria",
@@ -49,7 +40,7 @@ namespace Revenda.Core.Helpers
         },
         new RevendaEntity
         {
-            Id = Revenda2Id, // Usando Guid estático
+            Id = Revenda2Id,
             Cnpj = "51468333000178",
             RazaoSocial = "Bebidas Geladas Sempre ME",
             NomeFantasia = "Ponto Certo Bebidas",
@@ -59,25 +50,20 @@ namespace Revenda.Core.Helpers
 
         public static readonly List<Telefone> DefaultTelefones = new()
     {
-        // Telefones Revenda 1
         new Telefone { Id = Tel1Rev1Id, Numero = "11999998888", RevendaId = Revenda1Id },
         new Telefone { Id = Tel2Rev1Id, Numero = "1123456789", RevendaId = Revenda1Id },
-        // Telefone Revenda 2
         new Telefone { Id = Tel1Rev2Id, Numero = "21988887777", RevendaId = Revenda2Id }
     };
 
         public static readonly List<NomeContato> DefaultNomesContato = new()
     {
-        // Contatos Revenda 1
         new NomeContato { Id = ContatoPrincipalRev1Id, Nome = "Carlos Pereira", IsPrincipal = true, RevendaId = Revenda1Id },
         new NomeContato { Id = ContatoSecundarioRev1Id, Nome = "Ana Souza", IsPrincipal = false, RevendaId = Revenda1Id },
-        // Contato Revenda 2
         new NomeContato { Id = ContatoPrincipalRev2Id, Nome = "Roberto Lima", IsPrincipal = true, RevendaId = Revenda2Id }
     };
 
         public static readonly List<EnderecoEntrega> DefaultEnderecosEntrega = new()
     {
-        // Endereços Revenda 1
         new EnderecoEntrega
         {
             Id = Endereco1Rev1Id,
@@ -90,7 +76,6 @@ namespace Revenda.Core.Helpers
             Logradouro = "Avenida dos Expedicionários", Numero = "2000", Bairro = "Vila Industrial",
             Cidade = "Campinas", Estado = "SP", Cep = "13000200", RevendaId = Revenda1Id
         },
-         // Endereço Revenda 2
         new EnderecoEntrega
         {
             Id = Endereco1Rev2Id,
@@ -101,10 +86,9 @@ namespace Revenda.Core.Helpers
 
         public static readonly List<PedidoCliente> DefaultPedidosCliente = new()
     {
-        // Pedido Cliente para Revenda 1
         new PedidoCliente
         {
-            Id = PedidoCliente1Rev1Id, // Usando Guid estático
+            Id = PedidoCliente1Rev1Id,
             RevendaId = Revenda1Id,
             IdentificacaoCliente = "Bar Amigos da Esquina",
             DataPedido = new DateTime(2025, 4, 20, 10, 30, 0, DateTimeKind.Utc)
@@ -113,17 +97,15 @@ namespace Revenda.Core.Helpers
 
         public static readonly List<ItemPedidoCliente> DefaultItensPedidoCliente = new()
     {
-        // Itens do PedidoCliente1Rev1Id
         new ItemPedidoCliente { Id = Item1PedCliente1Rev1Id, PedidoClienteId = PedidoCliente1Rev1Id, ProdutoId = "SKU-CERV-PILSEN-600", Quantidade = 120 },
         new ItemPedidoCliente { Id = Item2PedCliente1Rev1Id, PedidoClienteId = PedidoCliente1Rev1Id, ProdutoId = "SKU-REFRI-COLA-2L", Quantidade = 50 }
     };
 
         public static readonly List<Pedido> DefaultPedidos = new()
     {
-        // Pedido  da Revenda 1 (simulando um pedido já enviado)
         new Pedido
         {
-            Id = Pedido1Rev1Id, // Usando Guid estático
+            Id = Pedido1Rev1Id, 
             RevendaId = Revenda1Id,
             DataCriacao = new DateTime(2025, 4, 21, 8, 0, 0, DateTimeKind.Utc),
             Status = StatusPedido.Enviado,
@@ -135,9 +117,8 @@ namespace Revenda.Core.Helpers
 
         public static readonly List<ItemPedido> DefaultItensPedido = new()
     {
-        // Itens do Pedido1Rev1Id (consolidados, > 1000 unidades)
         new ItemPedido { Id = Item1Ped1Rev1Id, PedidoId = Pedido1Rev1Id, ProdutoId = "SKU-CERV-PILSEN-600", Quantidade = 800 },
-        new ItemPedido { Id = Item2Ped1Rev1Id, PedidoId = Pedido1Rev1Id, ProdutoId = "SKU-REFRI-COLA-2L", Quantidade = 400 } // Total = 1200
+        new ItemPedido { Id = Item2Ped1Rev1Id, PedidoId = Pedido1Rev1Id, ProdutoId = "SKU-REFRI-COLA-2L", Quantidade = 400 } 
     };
     }
 }

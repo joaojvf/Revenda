@@ -12,11 +12,11 @@ public class ItemPedidoCliente
     public virtual PedidoCliente PedidoCliente { get; set; } = null!;
 
     [Required(ErrorMessage = "ID do produto é obrigatório.")]
-    [MaxLength(50)] // Assumindo um ID de produto como string
+    [MaxLength(50)]
     public required string ProdutoId { get; set; }
 
     [Range(1, int.MaxValue, ErrorMessage = "Quantidade deve ser pelo menos 1.")]
     public int Quantidade { get; set; }
-
-    // Poderia ter [ForeignKey("ProdutoId")] e navegação para uma entidade Produto, se existir.
 }
+
+public record ItemPedidoClienteGrouped(string ProdutoId, int Quantidade);

@@ -1,7 +1,9 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Revenda.Core.UseCases.GetRevendaById;
+using Revenda.Core.UseCases.PedidoCliente.ReceberPedidoCliente;
+using Revenda.Core.UseCases.PedidoFornecedor.EmitirPedidoFornecedor;
 using Revenda.Core.UseCases.Revenda.CreateRevenda;
+using Revenda.Core.UseCases.Revenda.GetRevendaById;
 
 namespace Revenda.UI.Controllers
 {
@@ -27,6 +29,29 @@ namespace Revenda.UI.Controllers
             var result = await mediator.Send(query);
 
             return result != null ? Ok(result) : NotFound();
+        }
+
+        [HttpPost("{revendaId:guid}/pedidos-fornecedor")]
+        [ProducesResponseType(typeof(Guid), StatusCodes.Status202Accepted)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status409Conflict)]
+        public async Task<IActionResult> EmitirPedidoParaFornecedor(Guid revendaId)
+        {
+            var command = new EmitirPedidoCommand(revendaId);
+            try
+            {
+                var pedidoAmbevId = await mediator.Send(command);
+                return Accepted(new { message = "Pedido para Fornecedor aceito para processamento.", pedidoAmbevId = pedidoAmbevId });
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(new { message = ex.Message });
+            }
+            catch (InvalidOperationException ex)
+            {
+                return Conflict(new { message = ex.Message });
+            }
         }
     }
 }

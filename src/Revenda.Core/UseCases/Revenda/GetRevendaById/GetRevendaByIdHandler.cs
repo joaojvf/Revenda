@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Revenda.Core.UseCases.GetRevendaById
+namespace Revenda.Core.UseCases.Revenda.GetRevendaById
 {
     public class GetRevendaByIdHandler(IMapper mapper, IRevendaRepository repository) : IRequestHandler<GetRevendaByIdQuery, RevendaDto?>
     {

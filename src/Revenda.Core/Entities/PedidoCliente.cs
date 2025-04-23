@@ -4,7 +4,7 @@ namespace Revenda.Core.Entities;
 public class PedidoCliente
 {
     [Key]
-    public Guid Id { get; set; } = Guid.NewGuid(); // Identificador do pedido retornado
+    public Guid Id { get; set; } = Guid.NewGuid();
 
     [Required]
     public Guid RevendaId { get; set; }

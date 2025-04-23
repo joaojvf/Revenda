@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Revenda.Core.UseCases.GetRevendaById
+namespace Revenda.Core.UseCases.Revenda.GetRevendaById
 {
     public record GetRevendaByIdQuery(Guid Id) : IRequest<RevendaDto?>;
 
