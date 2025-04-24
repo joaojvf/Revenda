@@ -6,7 +6,6 @@ public class Telefone
     [Key]
     public Guid Id { get; set; } = Guid.NewGuid();
 
-    // Validação de formato de telefone pode ser complexa -> usar FluentValidation
     [Required]
     [MaxLength(20)]
     public required string Numero { get; set; }

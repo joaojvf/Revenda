@@ -3,8 +3,8 @@
 public enum StatusPedido
 {
     Pendente,
-    Processando, // Status intermediário opcional
+    Processando,
     Enviado,
     Falhou,
-    ConcluidoComSucesso // Se houver confirmação da 
+    ConcluidoComSucesso
 }

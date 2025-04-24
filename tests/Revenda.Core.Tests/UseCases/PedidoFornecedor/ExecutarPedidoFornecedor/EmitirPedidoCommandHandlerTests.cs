@@ -6,7 +6,7 @@ using Revenda.Core.Entities;
 using Revenda.Core.Tests;
 using Revenda.Core.UseCases.PedidoFornecedor.EmitirPedidoFornecedor;
 
-public class EmitirPedidoCommandHandlerTests
+public class EmitirPedidoCommandHandlerTests9
 {
     [Theory, AutoMoqData]
     public async Task Should_Throw_When_Revenda_Not_Found(

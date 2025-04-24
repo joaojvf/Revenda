@@ -11,7 +11,7 @@ public class NomeContato
     [MaxLength(100)]
     public required string Nome { get; set; }
 
-    public bool IsPrincipal { get; set; } // Regra de "apenas um principal" -> FluentValidation ou lógica no Command Handler
+    public bool IsPrincipal { get; set; }
 
     [Required]
     public Guid RevendaId { get; set; }

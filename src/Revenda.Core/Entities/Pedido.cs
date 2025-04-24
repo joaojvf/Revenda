@@ -15,13 +15,12 @@ public class Pedido
     public DateTime DataCriacao { get; set; } = DateTime.UtcNow;
     public DateTime? DataEnvio { get; set; }
     public StatusPedido Status { get; set; } = StatusPedido.Pendente;
-    public string? OrderId { get; set; } // ID retornado pela API mockada
+    public string? OrderId { get; set; }
     public int TentativasEnvio { get; set; } = 0;
 
     [NotMapped]
     public int QuantidadeTotal => Itens.Sum(i => i.Quantidade);
 
-    // Se a  precisar saber os itens, mesmo sem os clientes:
     public virtual ICollection<ItemPedido> Itens { get; set; } = new List<ItemPedido>();
 
 }

@@ -30,7 +30,7 @@ public class EnderecoEntrega
     public required string Estado { get; set; }
 
     [Required(ErrorMessage = "CEP é obrigatório.")]
-    [RegularExpression(@"^\d{8}$", ErrorMessage = "CEP deve conter 8 dígitos numéricos.")] // Exemplo: 12345678
+    [RegularExpression(@"^\d{8}$", ErrorMessage = "CEP deve conter 8 dígitos numéricos.")]
     public required string Cep { get; set; }
 
     [Required]

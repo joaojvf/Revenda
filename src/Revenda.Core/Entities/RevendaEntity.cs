@@ -7,8 +7,7 @@ public class RevendaEntity
     public Guid Id { get; set; } = Guid.NewGuid();
 
     [Required(ErrorMessage = "CNPJ é obrigatório.")]
-    [StringLength(14)] // CNPJ tem 14 dígitos (sem formatação)
-    // Validação de formato/dígito verificador é complexa -> usar FluentValidation
+    [StringLength(14)]
     public required string Cnpj { get; set; }
 
     [Required(ErrorMessage = "Razão Social é obrigatória.")]
@@ -24,24 +23,10 @@ public class RevendaEntity
     [MaxLength(100)]
     public required string Email { get; set; }
 
-    // Navigation Properties
     public virtual ICollection<Telefone> Telefones { get; set; } = new List<Telefone>();
     public virtual ICollection<NomeContato> NomesContato { get; set; } = new List<NomeContato>();
     public virtual ICollection<EnderecoEntrega> EnderecosEntrega { get; set; } = new List<EnderecoEntrega>();
     public virtual ICollection<PedidoCliente> PedidosCliente { get; set; } = new List<PedidoCliente>();
     public virtual ICollection<Pedido> Pedidos { get; set; } = new List<Pedido>();
-
-    //public RevendaEntity(string cnpj, string razaoSocial, string nomeFantasia, string email)
-    //{
-    //    this.Cnpj = cnpj;
-    //    this.RazaoSocial = razaoSocial;
-    //    this.NomeFantasia = nomeFantasia;
-    //    this.Email = email;
-    //}
-
-    //public RevendaEntity()
-    //{
-        
-    //}
 }
 
