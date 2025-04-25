@@ -7,10 +7,12 @@ var db1 = builder
 
 var migration = builder
     .AddProject<Projects.Revenda_MigrationService>("revenda-migration-service")
-    .WithReference(db1);
+    .WithReference(db1)
+    .WaitFor(db1);
 
 builder.AddProject<Projects.Revenda_UI>("revenda-ui-api")
         .WithReference(db1)
+        .WaitFor(db1)
         .WithReference(migration); ;
 
 builder.Build().Run();
