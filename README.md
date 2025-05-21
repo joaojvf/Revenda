@@ -5,9 +5,9 @@
 
 •	.NET Aspire: Adicionando observabilidade(métricas, etc), containers e substituindo o docker file/compose;
 
-•	Entity Framework Core: ORM e utilização de migrations (criado um serviço console para rodar as migrações automaticamentes);
+•	Entity Framework Core: ORM e utilização de migrations (criado um serviço console para rodar as migrações automaticamente);
 
-•	MediatR: Na Implementando CQRS pattern;
+•	MediatR: Na Implementação CQRS pattern;
 
 •	AutoMapper: Para simplificar mapeamento de objetos;
 
